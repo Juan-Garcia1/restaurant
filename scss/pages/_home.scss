@@ -1,16 +1,22 @@
 .bread-bck {
-    background: url('http://www.performerprosites.com/development/clients/showpalace/wp-content/uploads/2014/05/tasteful-recipies-dinner-theatre.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 15% 0;
+  background: url("http://www.performerprosites.com/development/clients/showpalace/wp-content/uploads/2014/05/tasteful-recipies-dinner-theatre.jpg")
+    no-repeat center center;
+  background-size: cover;
+  padding: 15% 0;
 }
 
 .dessert-bck {
-    background: url('http://www.rustiquerichmond.co.uk/wp-content/uploads/2014/06/desert.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 15% 0px;
+  background: url("http://www.rustiquerichmond.co.uk/wp-content/uploads/2014/06/desert.jpg")
+    no-repeat center center;
+  background-size: cover;
+  padding: 15% 0px;
 }
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+}
+
+.side-by-side {
+  display: flex;
 }
