@@ -15,17 +15,14 @@ btns.forEach(function(btn) {
 window.sr = ScrollReveal();
 sr.reveal(".cheeries-img", {
   duration: 1500,
-  //   delay: 500,
   origin: "right",
   distance: "200px",
   opacity: 0,
   easing: "ease"
-  //   reset: true
 });
 sr.reveal(".fade-left", {
   origin: "left",
   opacity: 0,
-  //   reset: true,
   easing: "ease",
   distance: "200px",
   duration: 1500
@@ -33,7 +30,6 @@ sr.reveal(".fade-left", {
 sr.reveal(".fade-down", {
   origin: "top",
   opacity: 0,
-  //   reset: true,
   easing: "ease",
   distance: "200px",
   duration: 1500
@@ -41,7 +37,6 @@ sr.reveal(".fade-down", {
 sr.reveal(".fade-up", {
   origin: "bottom",
   opacity: 0,
-  //   reset: true,
   easing: "ease",
   distance: "200px",
   duration: 1500
@@ -49,7 +44,6 @@ sr.reveal(".fade-up", {
 sr.reveal(".fade-right", {
   origin: "right",
   opacity: 0,
-  //   reset: true,
   easing: "ease",
   distance: "200px",
   duration: 1500
