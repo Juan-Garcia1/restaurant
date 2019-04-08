@@ -1,0 +1,60 @@
+.hero--menu {
+  height: 55vh;
+}
+.menu-img {
+  background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.7)), url('../../images/menu-header-img.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.menu-board-header {
+  border-bottom: solid 2px lightgray;
+  margin-bottom: 28px;
+}
+
+.menu-board-header h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.menu-item {
+  margin-bottom: 40px;
+}
+
+.dish-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(min-width: 768px) {
+  #two-col-para {
+    column-count: 2;
+    column-gap: 40px;
+  }
+
+  .main-menu-board {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-column-gap: 40px;
+    
+    grid-auto-rows: minmax(180px, auto);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+
+  }
+  
+  .starters {
+    grid-column: 1 / span 1;
+  }
+
+  .mains {
+    grid-column: 2 / span 1;
+    
+  }
+
+  // .desert {
+  //   grid-column: 2 / span 1;
+  //   grid-row-end: span 1;
+  // }
+  
+}
