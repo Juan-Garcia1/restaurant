@@ -9,6 +9,11 @@
 .main-nav__logo-link {
     color: lighten($color: $secondary-color, $amount: 78%);
 }
+
+.main-nav__logo-link--black {
+    color: $secondary-color;
+}
+
 .nav-flex {
     display: flex;
     justify-content: space-between;
