@@ -1,28 +1,37 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create();
+let gulp = require("gulp"),
+  sass = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  browserSync = require("browser-sync").create();
 
+// Compile SCSS
+function scss() {
+  return gulp
+    .src("./scss/**/*/.scss")
+    .pipe(
+      sass({
+        outputStyle: "compressed"
+      })
+    )
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("./css"))
+    .pipe(browserSync.stream());
+}
 
-gulp.task('serve', ['sass'], function() {
+// Watch for any changes
+function serve() {
   browserSync.init({
-    server: './'
+    server: {
+      baseDir: "./"
+    }
   });
-  gulp.watch('scss/**/*.scss', ['sass']);
-  gulp.watch('*').on('change', browserSync.reload);
-});
+  gulp.watch("./scss/**/*.scss", scss);
+  gulp.watch("./*.html").on("change", browserSync.reload);
+  gulp.watch("./*.js").on("change", browserSync.reload);
+}
 
-// Compile Sass to CSS
-gulp.task('sass', function() {
-  gulp.src('scss/**/**/*.scss')
-        .pipe(sass({
-          outputStyle: 'compressed'
-        }).on('error', sass.logError))
-        .pipe(autoprefixer({
-          browsers: ['last 2 versions']
-        }))
-        .pipe(gulp.dest('./css'))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('default', ['serve', 'sass']);
+exports.scss = scss;
+exports.serve = serve;
