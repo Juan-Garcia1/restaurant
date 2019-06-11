@@ -6,7 +6,7 @@ let gulp = require("gulp"),
 // Compile SCSS
 function scss() {
   return gulp
-    .src("./scss/**/*/.scss")
+    .src("./scss/**/*.scss")
     .pipe(
       sass({
         outputStyle: "compressed"
