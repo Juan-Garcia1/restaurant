@@ -13,8 +13,13 @@
 </head>
 
 <body>
+        <div class="loader">
+                <div class="title">
+                    <p class="title__sub title__sub--white m-0">The Rosa</p>
+                </div>
+            </div>
 
-    <header class="hero hero--reservation reservations-img">
+    <header class="hero hero--reservation reservations-img trigger-1">
         <nav class="main-nav">
             <div class="container">
                 <div class="nav-flex align-center">
@@ -72,21 +77,23 @@
         </nav>
         <div class="hero__wrapper">
             <div class="title">
-                <p class="title__main m-0">Make a</p>
-                <h2 class="title__sub title__sub--white">reservation</h2>
+                <p class="title__main m-0 js-slide-down">Make a</p>
+                <h2 class="title__sub title__sub--white js-zoom-out">reservation</h2>
             </div>
             <!-- title end -->
-            <span>
+            <span class="symbol js-spin">
+                <span></span>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
-                    x="0px" y="0px" width="18px" height="18px" viewBox="0 0 24.748 24.748" style="enable-background:new 0 0 24.748 24.748;"
+                    x="0px" y="0px" width="10px" height="10px" viewBox="0 0 24.748 24.748" style="enable-background:new 0 0 24.748 24.748;"
                     xml:space="preserve">
                     <g>
                         <path d="M23.091,18.561c-0.37,0.644-1.042,1-1.734,1c-0.339,0-0.683-0.086-0.998-0.268l-5.982-3.455v6.91c0,1.104-0.896,2-2,2   c-1.104,0-2-0.896-2-2v-6.911l-5.985,3.456c-0.315,0.182-0.659,0.268-0.998,0.268c-0.691,0-1.364-0.356-1.734-1   c-0.552-0.957-0.225-2.18,0.732-2.73l5.983-3.456L2.39,8.919C1.433,8.366,1.106,7.145,1.658,6.188   C2.21,5.231,3.434,4.903,4.39,5.456l5.984,3.455V2c0-1.104,0.896-2,2-2c1.104,0,2,0.896,2,2v6.91l5.982-3.455   c0.956-0.553,2.183-0.225,2.732,0.732c0.552,0.957,0.225,2.18-0.732,2.731l-5.981,3.456l5.982,3.455   C23.314,16.381,23.643,17.604,23.091,18.561z"
                             fill="#be8040" />
                     </g>
                 </svg>
+                <span></span>
             </span>
-            <p class="hero__subtitle">Booking a table online is easy and takes just a couple of minutes.</p>
+            <p class="hero__subtitle js-fade-in">Booking a table online is easy and takes just a couple of minutes.</p>
         </div>
     </header>
 
@@ -282,7 +289,11 @@
         </div>
         <!--container end-->
     </footer>
-    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

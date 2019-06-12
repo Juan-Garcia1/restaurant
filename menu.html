@@ -13,8 +13,13 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="title">
+            <p class="title__sub title__sub--white m-0">The Rosa</p>
+        </div>
+    </div>
 
-  <header class="hero hero--menu menu-img">
+  <header class="hero hero--menu menu-img trigger-4">
     <nav class="main-nav">
       <div class="container">
         <div class="nav-flex align-center">
@@ -69,7 +74,7 @@
     </nav>
     <div class="hero__wrapper">
       <div class="title">
-        <div class="title__sub title__sub--white">menu</div>
+        <h2 class="title__sub title__sub--white js-fade-up">menu</h2>
       </div>
       <!-- title end -->
     </div>
@@ -265,7 +270,11 @@
     </div>
     <!--container end-->
   </footer>
-  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
