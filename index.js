@@ -102,10 +102,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let trigger3Tl = new TimelineMax();
 
     trigger3Tl
-      .from(".trigger-3 .js-fade-left", 0.75, { opacity: 0, x: -50 })
-      .from(".trigger-3 .js-fade-down", 0.75, { opacity: 0, y: -50 }, "-=1")
-      .from(".trigger-3 .js-fade-up", 0.75, { opacity: 0, y: 100 }, "-=1")
-      .from(".trigger-3 .js-fade-right", 0.75, { opacity: 0, x: 100 }, "-=1");
+      .from(".trigger-3 .js-fade-left", 0.75, { opacity: 0, x: -70 }, "-=1")
+      .from(".trigger-3 .js-fade-down", 0.75, { opacity: 0, y: -70 }, "-=1")
+      .from(".trigger-3 .js-fade-up", 0.75, { opacity: 0, y: 70 }, "-=1")
+      .from(".trigger-3 .js-fade-right", 0.75, { opacity: 0, x: 70 }, "-=1");
 
     let trigger3Scene = new ScrollMagic.Scene({
       triggerElement: ".trigger-3",
@@ -140,5 +140,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // .addIndicators({ name: "trigger 4" })
         .addTo(controller);
     });
+  });
+
+  // var Scrollbar = window.Scrollbar;
+  Scrollbar.init(document.querySelector("body"), {
+    speed: 0.75,
+    damping: 0.1,
+    renderByPixels: true,
+    thumbMinSize: 20,
+    alwaysShowTracks: true,
+    continuousScrolling: "auto",
+    delegateTo: null
   });
 });
